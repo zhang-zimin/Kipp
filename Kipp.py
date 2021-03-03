@@ -8,7 +8,7 @@ data = data['LEVEL']
 #只需要水位数据，剔除其余列
 b=data.max()
 #取水位最大值，一般为激发时的水位
-intri_index = int(np.where(data==b)[0])
+intri_index = int(np.where(data==b)[0][0])
 start_index = intri_index - 10
 #激发时索引减去10s作为初始索引
 start_value = data.loc[start_index]
